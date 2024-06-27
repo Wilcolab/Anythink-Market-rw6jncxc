@@ -5,6 +5,10 @@ const Comment = mongoose.model("Comment");
 module.exports = router;
 
 router.get("/", async (req, res) => {
+/**
+ * Retrieves all comments from the database.
+ * @type {Array<Object>} An array of comment objects.
+ */
   const comments = await Comment.find();
   res.json(comments);
 });
